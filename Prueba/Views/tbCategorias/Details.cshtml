@@ -1,0 +1,27 @@
+﻿@model Prueba.tbCategoria
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VISUALIZAR</h2>
+
+<div>
+    <h4>Revise que la informacion sea correcta.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Nombre }) |
+    @Html.ActionLink("Regresar a la pestaña anterior", "Index")
+</p>
